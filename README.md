@@ -5,7 +5,7 @@ A lightweight, high-performance command-line network packet analyzer written ent
 ## Features
 
 * **Live Traffic Capture:** Promiscuous mode listening on network interfaces.
-* **BPF Filtering:** Full support for Berkeley Packet Filter syntax via command-line arguments (e.g., `tcp port 80`, `icmp`).
+* **BPF Filtering:** Full support for Berkeley Packet Filter syntax via command-line arguments.
 * **Header Decoding:** Parses and displays MAC addresses, IP addresses, and distinguishes between TCP, UDP, and ICMP protocols.
 * **Payload Extraction:** Navigates through Ethernet, IP, and TCP headers using C++ pointer arithmetic to extract and print human-readable ASCII payloads.
 * **PCAP Dumping:** Automatically saves the captured packet stream to a custom `.pcap` file for later analysis in Wireshark.
