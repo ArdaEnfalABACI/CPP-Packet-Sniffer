@@ -15,7 +15,7 @@ A lightweight, high-performance command-line network packet analyzer written ent
 
 This tool is built for Linux/Unix environments. You need the `libpcap` development library installed on your system.
 
-For Debian/Ubuntu-based systems:
+For Debian/Ubuntu-based systems :
 
 `bash`
 `sudo apt update`
