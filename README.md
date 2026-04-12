@@ -26,7 +26,7 @@ sudo apt install libpcap-dev g++
 Clone the repository and compile the source code using `g++`:
 
 `bash
-git clone https://github.com/YOUR_USERNAME/cpp-packet-sniffer.git
+git clone https://github.com/ArdaEnfalABACI/cpp-packet-sniffer.git
 cd cpp-packet-sniffer
 g++ web_sniffer.cpp -o web_sniffer -lpcap
 `
@@ -62,19 +62,6 @@ sudo ./web_sniffer secure_traffic tcp port 443
 `bash
 sudo ./web_sniffer ping_test icmp
 `
-
-### 🔓 Pro Tip: Running without `sudo`
-Capturing packets requires raw socket access, which is normally restricted to the root user. If you want to run this tool without typing `sudo` every time, you can grant specific network capabilities to the executable:
-
-`bash
-sudo setcap cap_net_raw,cap_net_admin=eip ./web_sniffer
-./web_sniffer my_test tcp port 80
-`
-
-## 🔮 Future Roadmap
-* [ ] Add Windows support using Npcap SDK.
-* [ ] Implement a basic Intrusion Detection System (IDS) rule engine.
-* [ ] Add application-layer protocol parsing (e.g., DNS, HTTP headers).
 
 ## ⚠️ Disclaimer
 This tool was created for educational purposes, network debugging, and understanding low-level C++ socket programming. Only use it on networks you own or have explicit permission to monitor.
