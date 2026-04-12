@@ -51,24 +51,20 @@ The tool is completely CLI-driven. You can specify the output file name and appl
 **Examples:**
 
 1. Capture all traffic and save it to the default `capture.pcap`:
-`bash
-sudo ./web_sniffer
-`
+`bash`
+`sudo ./web_sniffer`
 
 2. Capture all traffic and save it to a specific file:
-`bash
-sudo ./web_sniffer my_network_test
-`
+`bash`
+`sudo ./web_sniffer my_network_test`
 
 3. Capture only secure web traffic (HTTPS) and save it:
-`bash
-sudo ./web_sniffer secure_traffic tcp port 443
-`
+`bash`
+`sudo ./web_sniffer secure_traffic tcp port 443`
 
 4. Capture only ping requests (ICMP):
-`bash
-sudo ./web_sniffer ping_test icmp
-`
+`bash`
+`sudo ./web_sniffer ping_test icmp`
 
 ## ⚠️ Disclaimer
 This tool was created for educational purposes, network debugging, and understanding low-level C++ socket programming. Only use it on networks you own or have explicit permission to monitor.
