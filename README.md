@@ -21,18 +21,22 @@ For Debian/Ubuntu-based systems:
 `sudo apt update`
 
 `bash`
-`sudo apt install libpcap-dev g++`
+`sudo apt install build-essential libpcap-dev`
 
 
 ## ⚙️ Compilation
 
 Clone the repository and compile the source code using `g++`:
 
-`bash
-git clone https://github.com/ArdaEnfalABACI/cpp-packet-sniffer.git
-cd cpp-packet-sniffer
-g++ web_sniffer.cpp -o web_sniffer -lpcap
-`
+`bash`
+`git clone https://github.com/ArdaEnfalABACI/cpp-packet-sniffer.git`
+
+`bash`
+`cd cpp-packet-sniffer`
+
+`bash`
+`g++ web_sniffer.cpp -o web_sniffer -lpcap`
+
 *(Note: Do not forget to link the pcap library using the `-lpcap` flag).*
 
 ## 📖 Usage
@@ -40,9 +44,9 @@ g++ web_sniffer.cpp -o web_sniffer -lpcap
 The tool is completely CLI-driven. You can specify the output file name and apply BPF filters directly from the terminal.
 
 **Syntax:**
-`bash
-sudo ./web_sniffer [output_file_name] [bpf_filters...]
-`
+`bash`
+`sudo ./web_sniffer [output_file_name] [bpf_filters...]`
+
 
 **Examples:**
 
