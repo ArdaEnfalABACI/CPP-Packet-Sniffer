@@ -2,7 +2,7 @@
 
 A lightweight, high-performance command-line network packet analyzer written entirely in C++. Built with `libpcap`, this tool captures live network traffic, decodes network layer headers, extracts raw payloads, and saves the capture stream into a Wireshark-compatible `.pcap` file for deep analysis.
 
-## 🚀 Features
+## Features
 
 * **Live Traffic Capture:** Promiscuous mode listening on network interfaces.
 * **BPF Filtering:** Full support for Berkeley Packet Filter syntax via command-line arguments (e.g., `tcp port 80`, `icmp`).
@@ -11,7 +11,7 @@ A lightweight, high-performance command-line network packet analyzer written ent
 * **PCAP Dumping:** Automatically saves the captured packet stream to a custom `.pcap` file for later analysis in Wireshark.
 * **Graceful Shutdown:** Catches `SIGINT` (Ctrl+C) to safely close memory handles and prevent `.pcap` file corruption.
 
-## 🛠️ Prerequisites
+## Prerequisites
 
 This tool is built for Linux/Unix environments. You need the `libpcap` development library installed on your system.
 
@@ -24,7 +24,7 @@ For Debian/Ubuntu-based systems:
 `sudo apt install build-essential libpcap-dev`
 
 
-## ⚙️ Compilation
+## Compilation
 
 Clone the repository and compile the source code using `g++`:
 
@@ -39,7 +39,7 @@ Clone the repository and compile the source code using `g++`:
 
 *(Note: Do not forget to link the pcap library using the `-lpcap` flag).*
 
-## 📖 Usage
+## Usage
 
 The tool is completely CLI-driven. You can specify the output file name and apply BPF filters directly from the terminal.
 
@@ -66,5 +66,5 @@ The tool is completely CLI-driven. You can specify the output file name and appl
 `bash`
 `sudo ./web_sniffer ping_test icmp`
 
-## ⚠️ Disclaimer
+## Disclaimer
 This tool was created for educational purposes, network debugging, and understanding low-level C++ socket programming. Only use it on networks you own or have explicit permission to monitor.
