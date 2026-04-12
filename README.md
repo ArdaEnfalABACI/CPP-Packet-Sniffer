@@ -17,7 +17,9 @@ This tool is built for Linux/Unix environments. You need the `libpcap` developme
 
 For Debian/Ubuntu-based systems:
 `bash`
+
 `sudo apt update`
+
 `sudo apt install libpcap-dev g++`
 
 
