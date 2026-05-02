@@ -21,7 +21,9 @@ Fully containerized with Docker for zero-dependency cross-platform execution.
 ## Installation
 
 Simply clone the repository and grant execution permissions to the wrapper script:
+
 `bash`
+
 `git clone [https://github.com/ArdaEnfalABACI/CPP-Packet-Sniffer](https://github.com/ArdaEnfalABACI/CPP-Packet-Sniffer)`
 `cd CPP-Packet-Sniffer`
 `chmod +x run.sh`
@@ -40,18 +42,22 @@ The tool is completely CLI-driven via the provided run.sh script. This script au
 **Examples:**
 
 1. Capture all traffic and save it to the default `capture.pcap`:
+
 `bash`
 `./run.sh`
 
 2. Capture all traffic and save it to a specific file:
+
 `bash`
 `./run.sh my_network_test`
 
 3. Capture only secure web traffic (HTTPS) and save it:
+
 `bash`
 `./run.sh secure_traffic tcp port 443`
 
 4. Capture only ping requests (ICMP):
+
 `bash`
 `./run.sh ping_test icmp`
 
