@@ -20,9 +20,8 @@ void signal_handler(int signum) {
 
 void packet_handler(u_char *user_data, const struct pcap_pkthdr *pkthdr, const u_char *packet){
     	// pkthdr (Packet Header), libpcap's own structure that holds info like packet length and time
-    
-    	pcap_dumper_t *dumper = (pcap_dumper_t *)user_data;
-    
+	
+	pcap_dumper_t *dumper = (pcap_dumper_t *)user_data;
     	pcap_dump((u_char *)dumper, pkthdr, packet);
     
     	cout << "Packet Caught! Length : " << pkthdr->len << " bytes." << endl << endl;
@@ -179,15 +178,22 @@ int main(int argc, char *argv[]) {
         	cerr << "Error: Couldn't create pcap file: " << filename << endl;
         	return 1;
     	}
+	
+	string display_filename = filename;
 
-    	cout << "Saving captured packets to '" << filename << "'..." << endl;
+	size_t last_slash = filename.find_last_of("/");
+	if (last_slash != string::npos) {
+		display_filename = filename.substr(last_slash + 1);
+	}
+
+    	cout << "Saving captured packets to '" << display_filename << "'..." << endl;
     	cout << "=================================================================" << endl << endl;
 
-	 //START LISTENING
-   	 pcap_loop(global_handle, 0, packet_handler, (u_char *)dumper);
+	//START LISTENING
+	pcap_loop(global_handle, 0, packet_handler, (u_char *)dumper);
     
     	//CLEAN UP AND CLOSE
-    	pcap_dump_close(dumper);
+	pcap_dump_close(dumper);
     	pcap_close(global_handle);
 	pcap_freealldevs(alldevs);
 
