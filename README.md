@@ -24,7 +24,7 @@ Simply clone the repository and grant execution permissions to the wrapper scrip
 
 `bash`
 
-`git clone [https://github.com/ArdaEnfalABACI/CPP-Packet-Sniffer](https://github.com/ArdaEnfalABACI/CPP-Packet-Sniffer)`
+`git clone https://github.com/ArdaEnfalABACI/CPP-Packet-Sniffer.git`
 
 `cd CPP-Packet-Sniffer`
 
