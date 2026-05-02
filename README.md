@@ -23,8 +23,11 @@ Fully containerized with Docker for zero-dependency cross-platform execution.
 Simply clone the repository and grant execution permissions to the wrapper script:
 
 `bash`
+
 `git clone [https://github.com/ArdaEnfalABACI/CPP-Packet-Sniffer](https://github.com/ArdaEnfalABACI/CPP-Packet-Sniffer)`
+
 `cd CPP-Packet-Sniffer`
+
 `chmod +x run.sh`
 
 ## Usage
