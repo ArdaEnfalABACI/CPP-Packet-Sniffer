@@ -57,22 +57,18 @@ The tool is completely CLI-driven and interactive. Start the engine using the pr
 
 * Output Mode Selection:
 
-* [V] Verbose Mode: Displays absolutely all captured packets (Headers, MAC, IP, Ports).
+* **[V] Verbose Mode:** Displays absolutely all captured packets (Headers, MAC, IP, Ports).
 
-* [T] Targeted Mode: Filters out standard ACK/SYN packets and only displays important events like DNS queries, DHCP assignments, SNI targets, and DLP alerts.
+* **[T] Targeted Mode:** Filters out standard ACK/SYN packets and only displays important events like DNS queries, DHCP assignments, SNI targets, and DLP alerts.
 
-* BPF Filtering: Enter any standard Berkeley Packet Filter (e.g., tcp port 443, icmp, port 80) or leave blank to capture all traffic.
+* **BPF Filtering:** Enter any standard Berkeley Packet Filter (e.g., tcp port 443, icmp, port 80) or leave blank to capture all traffic.
 
-* Output File: Specify a name for the output file (e.g., my_capture.pcap). The file will be saved directly to your current working directory.
-
-* Example DLP Alert:
-
-When the tool catches outbound plaintext data (like a login attempt), the Targeted UI will display:
+* **Output File:** Specify a name for the output file (e.g., my_capture.pcap). The file will be saved directly to your current working directory.
 
 ## DATA LEAK DETECTED (Outbound Traffic)!
-* Request Line  : POST /Login.php HTTP/1.1
-* Session Info  : Cookie: ASPSESSIONID=ABCDEF123456
-* Outbound Data : username=admin&password=supersecret
+* **Request Line  :** POST /Login.php HTTP/1.1
+* **Session Info  :** Cookie: ASPSESSIONID=ABCDEF123456
+* **Outbound Data :** username=admin&password=supersecret
 
 
 ## Disclaimer
