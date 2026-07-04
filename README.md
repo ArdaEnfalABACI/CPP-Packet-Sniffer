@@ -65,12 +65,6 @@ The tool is completely CLI-driven and interactive. Start the engine using the pr
 
 * **Output File:** Specify a name for the output file (e.g., my_capture.pcap). The file will be saved directly to your current working directory.
 
-## DATA LEAK DETECTED (Outbound Traffic)!
-* **Request Line  :** POST /Login.php HTTP/1.1
-* **Session Info  :** Cookie: ASPSESSIONID=ABCDEF123456
-* **Outbound Data :** username=admin&password=supersecret
-
-
 ## Disclaimer
 
 * This tool was created for educational purposes, network debugging, understanding low-level C++ socket programming, and Machine Learning (ML) dataset generation. Only use it on networks you own or have explicit permission to monitor.
