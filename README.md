@@ -36,12 +36,10 @@ Since the tool is fully Dockerized, you only need:
 
 `cd CPP-Packet-Sniffer`
 
-
-3. **Make the run script executable:**
+2. **Make the run script executable:**
 `chmod +x run.sh`
 
-
-4. **Build the Docker Image:**
+3. **Build the Docker Image:**
 This will install build-essential and libpcap-dev inside the container and compile the C++ code.
 
 `sudo docker build -t ardaenfalabaci/cpp-sniffer:v1.0 .`
