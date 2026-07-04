@@ -1,4 +1,4 @@
-## C++ DPI & DLP Packet Sniffer
+## C++ DPI & DLP Packet Sniffer
 
 A high-performance, Dockerized command-line network packet analyzer and Data Leak Prevention (DLP) engine written entirely in C++. Built with libpcap, this tool performs Deep Packet Inspection (DPI) to extract application-layer data (HTTP/HTTPS, DNS, DHCP) and actively monitors outbound traffic for plaintext data leaks.
 
