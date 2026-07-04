@@ -32,7 +32,7 @@ Since the tool is fully Dockerized, you only need:
 
 1. **Clone the repository:**
 `bash`
-`git clone [https://github.com/ArdaEnfalABACI/CPP-Packet-Sniffer.git](https://github.com/ArdaEnfalABACI/CPP-Packet-Sniffer.git)`
+`git clone https://github.com/ArdaEnfalABACI/CPP-Packet-Sniffer.git`
 `cd CPP-Packet-Sniffer`
 
 
