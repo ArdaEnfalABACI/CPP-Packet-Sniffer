@@ -33,14 +33,15 @@ Since the tool is fully Dockerized, you only need:
 1. **Clone the repository:**
 `bash`
 `git clone https://github.com/ArdaEnfalABACI/CPP-Packet-Sniffer.git`
+
 `cd CPP-Packet-Sniffer`
 
 
-2. **Make the run script executable:**
+3. **Make the run script executable:**
 `chmod +x run.sh`
 
 
-3. **Build the Docker Image:**
+4. **Build the Docker Image:**
 This will install build-essential and libpcap-dev inside the container and compile the C++ code.
 
 `sudo docker build -t ardaenfalabaci/cpp-sniffer:v1.0 .`
@@ -54,8 +55,6 @@ The tool is completely CLI-driven and interactive. Start the engine using the pr
 **Interactive Prompts:**
 
 * Once executed, the interactive wizard will guide you through the setup:
-
-* Output Mode Selection:
 
 * **[V] Verbose Mode:** Displays absolutely all captured packets (Headers, MAC, IP, Ports).
 
