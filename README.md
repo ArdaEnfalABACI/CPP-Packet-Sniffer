@@ -2,7 +2,7 @@ C++ DPI & DLP Packet Sniffer
 
 A high-performance, Dockerized command-line network packet analyzer and Data Leak Prevention (DLP) engine written entirely in C++. Built with libpcap, this tool performs Deep Packet Inspection (DPI) to extract application-layer data (HTTP/HTTPS, DNS, DHCP) and actively monitors outbound traffic for plaintext data leaks.
 
-🚀 Features
+## Features
 
 Deep Packet Inspection (DPI): Parses unencrypted HTTP hostnames and extracts HTTPS SNI (Server Name Indication) directly from TLS Client Hello packets.
 
@@ -18,7 +18,7 @@ Dockerized Architecture: Runs securely inside an isolated container with host ne
 
 PCAP Dumping: Automatically saves the captured packet stream to a custom .pcap file on your local host for Wireshark analysis via volume mounting.
 
-📋 Prerequisites
+## Prerequisites
 
 Since the tool is fully Dockerized, you only need:
 
@@ -28,7 +28,7 @@ A Linux/Unix environment (or Windows via a Virtual Machine / WSL2).
 
 sudo privileges to capture network interfaces.
 
-🛠️ Installation & Setup
+## Installation & Setup
 
 Clone the repository:
 
@@ -47,7 +47,7 @@ This will install build-essential and libpcap-dev inside the container and compi
 sudo docker build -t ardaenfalabaci/cpp-sniffer:v1.0 .
 
 
-💻 Usage
+## Usage
 
 The tool is completely CLI-driven and interactive. Start the engine using the provided shell script, which handles all Docker networking and volume mounts automatically:
 
@@ -72,12 +72,12 @@ Example DLP Alert:
 
 When the tool catches outbound plaintext data (like a login attempt), the Targeted UI will display:
 
-🚨 DATA LEAK DETECTED (Outbound Traffic)!
+## DATA LEAK DETECTED (Outbound Traffic)!
 Request Line  : POST /Login.php HTTP/1.1
 Session Info  : Cookie: ASPSESSIONID=ABCDEF123456
 Outbound Data : username=admin&password=supersecret
 
 
-⚠️ Disclaimer
+## Disclaimer
 
 This tool was created for educational purposes, network debugging, understanding low-level C++ socket programming, and Machine Learning (ML) dataset generation. Only use it on networks you own or have explicit permission to monitor.
