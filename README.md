@@ -4,57 +4,54 @@ A high-performance, Dockerized command-line network packet analyzer and Data Lea
 
 ## Features
 
-Deep Packet Inspection (DPI): Parses unencrypted HTTP hostnames and extracts HTTPS SNI (Server Name Indication) directly from TLS Client Hello packets.
+* **Deep Packet Inspection (DPI):** Parses unencrypted HTTP hostnames and extracts HTTPS SNI (Server Name Indication) directly from TLS Client Hello packets.
 
-Data Leak Prevention (DLP): Actively monitors outbound HTTP traffic (Port 80) to catch and alert on leaked passwords, session cookies, and POST form data.
+* **Data Leak Prevention (DLP):** Actively monitors outbound HTTP traffic (Port 80) to catch and alert on leaked passwords, session cookies, and POST form data.
 
-Smart Interactive UI: Features a Targeted Mode that filters out standard TCP/UDP noise to display only critical application data with ANSI color-coded alerts, alongside a traditional Verbose Mode.
+* **Smart Interactive UI:** Features a **Targeted Mode** that filters out standard TCP/UDP noise to display only critical application data with ANSI color-coded alerts, alongside a traditional **Verbose Mode**.
 
-Protocol Decoding: Fully decodes Ethernet, IPv4, IPv6, TCP, UDP, ICMP, and ARP headers.
+* **Protocol Decoding:** Fully decodes Ethernet, IPv4, IPv6, TCP, UDP, ICMP, and ARP headers.
 
-Application Layer Analysis: Extracts human-readable DNS queries and analyzes DHCP (DORA) transactions.
+* **Application Layer Analysis:** Extracts human-readable DNS queries and analyzes DHCP (DORA) transactions.
 
-Dockerized Architecture: Runs securely inside an isolated container with host network access. No need to clutter your local machine with C++ libraries.
+* **Dockerized Architecture:** Runs securely inside an isolated container with host network access. No need to clutter your local machine with C++ libraries.
 
-PCAP Dumping: Automatically saves the captured packet stream to a custom .pcap file on your local host for Wireshark analysis via volume mounting.
+* **PCAP Dumping:** Automatically saves the captured packet stream to a custom .pcap file on your local host for Wireshark analysis via volume mounting.
 
 ## Prerequisites
 
 Since the tool is fully Dockerized, you only need:
 
-Docker Engine installed on your system.
+* **Docker Engine** installed on your system.
 
-A Linux/Unix environment (or Windows via a Virtual Machine / WSL2).
+* A Linux/Unix environment (or Windows via a Virtual Machine / WSL2).
 
-sudo privileges to capture network interfaces.
+* `sudo` privileges to capture network interfaces.
 
 ## Installation & Setup
 
-Clone the repository:
-
-git clone [https://github.com/ArdaEnfalABACI/CPP-Packet-Sniffer.git](https://github.com/ArdaEnfalABACI/CPP-Packet-Sniffer.git)
-cd CPP-Packet-Sniffer
-
-
-Make the run script executable:
-
-chmod +x run.sh
+1. **Clone the repository:**
+`bash`
+`git clone [https://github.com/ArdaEnfalABACI/CPP-Packet-Sniffer.git](https://github.com/ArdaEnfalABACI/CPP-Packet-Sniffer.git)`
+`cd CPP-Packet-Sniffer`
 
 
-Build the Docker Image:
+2. **Make the run script executable:**
+`chmod +x run.sh`
+
+
+3. **Build the Docker Image:**
 This will install build-essential and libpcap-dev inside the container and compile the C++ code.
 
-sudo docker build -t ardaenfalabaci/cpp-sniffer:v1.0 .
+`sudo docker build -t ardaenfalabaci/cpp-sniffer:v1.0 .`
 
 
 ## Usage
-
 The tool is completely CLI-driven and interactive. Start the engine using the provided shell script, which handles all Docker networking and volume mounts automatically:
 
-./run.sh
+`./run.sh`
 
-
-Interactive Prompts:
+**Interactive Prompts:**
 
 Once executed, the interactive wizard will guide you through the setup:
 
