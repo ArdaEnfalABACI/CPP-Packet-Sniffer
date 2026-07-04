@@ -269,7 +269,7 @@ void packet_handler(u_char *user_data, const struct pcap_pkthdr *pkthdr, const u
                     string host = parse_http_host(payload, payload_length);
                     if (!host.empty()) {
                         is_important = true; // We caught a target!
-                        ss << COLOR_GREEN << "🎯 Target Host   : " << host << COLOR_RESET << endl;
+                        ss << COLOR_GREEN << "Target Host   : " << host << COLOR_RESET << endl;
                     }
                     
                     // NEW/FIXED: Check if packet is OUTBOUND (leaving our machine on port 80)
@@ -277,7 +277,7 @@ void packet_handler(u_char *user_data, const struct pcap_pkthdr *pkthdr, const u
                         string outbound_data = parse_outbound_http(payload, payload_length);
                         if (!outbound_data.empty()) {
                             is_important = true; // Make sure it prints on screen!
-                            ss << COLOR_RED << "🚨 DATA LEAK DETECTED (Outbound Traffic)!" << COLOR_RESET << endl;
+                            ss << COLOR_RED << "DATA LEAK DETECTED (Outbound Traffic)!" << COLOR_RESET << endl;
                             ss << COLOR_YELLOW << outbound_data << COLOR_RESET;
                         }
                     }
@@ -288,7 +288,7 @@ void packet_handler(u_char *user_data, const struct pcap_pkthdr *pkthdr, const u
                     string sni = parse_tls_sni(payload, payload_length);
                     if (!sni.empty()) {
                         is_important = true; // We caught a target!
-                        ss << COLOR_CYAN << "🔒 SNI (Target)  : " << sni << COLOR_RESET << endl;
+                        ss << COLOR_CYAN << "SNI (Target)  : " << sni << COLOR_RESET << endl;
                     }
                 }
                 else {
@@ -327,7 +327,7 @@ void packet_handler(u_char *user_data, const struct pcap_pkthdr *pkthdr, const u
 
                     if (!queried_domain.empty() && queried_domain != "<compressed>") {
                          is_important = true;
-                         ss << COLOR_YELLOW << "🌍 DNS Query     : " << queried_domain << COLOR_RESET << endl;
+                         ss << COLOR_YELLOW << "DNS Query     : " << queried_domain << COLOR_RESET << endl;
                     }
                 }
             }
@@ -351,7 +351,7 @@ void packet_handler(u_char *user_data, const struct pcap_pkthdr *pkthdr, const u
 
                     ss << "Transaction ID  : 0x" << hex << ntohl(dhcp->xid) << dec << endl;
                     ss << "Client IP       : " << inet_ntoa(dhcp->ciaddr) << endl;
-                    ss << COLOR_RED << "🔥 Offered IP    : " << inet_ntoa(dhcp->yiaddr) << COLOR_RESET << endl;
+                    ss << COLOR_RED << "Offered IP    : " << inet_ntoa(dhcp->yiaddr) << COLOR_RESET << endl;
                     ss << "Server IP       : " << inet_ntoa(dhcp->siaddr) << endl;
                 }
             }
@@ -402,7 +402,7 @@ void packet_handler(u_char *user_data, const struct pcap_pkthdr *pkthdr, const u
                     string host = parse_http_host(payload, payload_length);
                     if (!host.empty()) {
                         is_important = true;
-                        ss << COLOR_GREEN << "🎯 Target Host   : " << host << COLOR_RESET << endl;
+                        ss << COLOR_GREEN << "Target Host   : " << host << COLOR_RESET << endl;
                     }
                 }
                 else if (src_port == 443 || dst_port == 443) {
@@ -410,7 +410,7 @@ void packet_handler(u_char *user_data, const struct pcap_pkthdr *pkthdr, const u
                     string sni = parse_tls_sni(payload, payload_length);
                     if (!sni.empty()) {
                         is_important = true;
-                        ss << COLOR_CYAN << "🔒 SNI (Target)  : " << sni << COLOR_RESET << endl;
+                        ss << COLOR_CYAN << "SNI (Target)  : " << sni << COLOR_RESET << endl;
                     }
                 }
             }
